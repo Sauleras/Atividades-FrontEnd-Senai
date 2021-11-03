@@ -1,0 +1,28 @@
+.box01 {
+    background-color: yellow;
+    width: 600px;
+    height: 400px;
+}
+
+.box02 {
+    background-color: pink;
+    width: 400px;
+    height: 250px;
+}
+
+.box03 {
+    background-color: blueviolet;
+    width: 300px;
+    height: 100px;
+}
+
+.box04 {
+    background-color: grey;
+    width: 120px;
+    height: 150px;
+}
+
+.textounico {
+    color: grey;
+    font-size: ;
+}

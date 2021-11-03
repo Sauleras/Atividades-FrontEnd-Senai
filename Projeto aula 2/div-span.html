@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div-Span</title>
+
+    <style>
+        #topo {
+            background-color: salmon;
+        }
+
+        #conteudo{
+            background-color: seagreen;
+        }
+
+        #rodape{
+            background-color: steelblue;
+        }
+
+        #assinatura{
+            background-color: violet;
+        }
+
+        .produto{
+            background-color: rgb(143, 69, 16);
+            margin: 10px
+        }
+
+        .color {
+            color: yellowgreen;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="topo">
+        <img src="imgproj/logo-pet.png" width="150px">
+        <ul>
+            <li>Home</li>
+            <li>Produtos</li>
+            <li>Contato</li>
+        </ul>
+
+    </div>
+
+    <div id="conteudo">
+        <div class="produto">
+            Produto 01
+        </div>
+        <div class="produto">
+            Produto 02
+        </div>
+        <div class="produto">
+            Produto 03
+        </div>
+
+    </div>
+
+    <div id="rodape">
+        Todos os direitos reservados
+    </div>
+
+    <span id="assinatura">
+        Saulo
+
+    </span>
+
+    <span>
+        Junio <span class="color">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit.
+
+    </span>
+    
+</body>
+</html>

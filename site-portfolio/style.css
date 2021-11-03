@@ -1,0 +1,145 @@
+body {
+    font-family: 'Robot', sans-serif;
+    color: white;
+    background-color: #ebebeb;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.header-container {
+    background-color: rgb(57, 58, 58);
+    min-height: 100px;
+    font-size: 0.8rem;
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    background-color: rgb(57, 58, 58);
+    max-width: 1024px;
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.col {
+    width: 30%;
+    margin-bottom: 40px;
+    background-color: rgb(19,81,197);
+}
+
+.col p {
+    font-size: 0.87rem;
+    padding: 20px;
+    line-height: 1.1rem;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+}
+
+.col p::first-line {
+    font-weight: 700;    
+}
+
+.hide-desktop-only {
+    display: none;
+}
+
+.mybutton {
+    padding: 10px 25px;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 20px;    
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.mob-wrapper {
+    display: none;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .col {
+        width: 45%;
+    }
+
+    .hide-desktop-only {
+        display: block;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 40px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .logo {
+        padding: 40px;
+    }
+
+    .mybutton {
+        margin-left: 0;
+    }
+
+    .mob-wrapper {
+        display: block;
+        padding-right: 30px;
+    }
+
+    .mob-nav {
+        display: none;
+        position: absolute;
+        padding: 10px;
+    }
+
+    .navbutton {
+        display: block;
+        background-color: rgb(19,81,197);
+        padding: 15px 30px;
+        margin-left: -60px;
+        text-align: center;
+    }
+}
+
+/* Smartphone */
+
+@media (max-width: 400px) {
+    .col {
+        width: 100%;
+    }
+
+    .hide-mobile-only {
+        display: none;
+    }
+}
