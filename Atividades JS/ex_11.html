@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="ex11.js" defer></script>
+</head>
+
+<body style="background-color: rgba(121, 133, 133, 0.527);">
+    <br><br>
+
+    <div class="container border bg-secondary text-light p-3" style="width: 18rem">
+
+        <h1 class="mb-3">Farmacia</h1>
+        <div class="mb-3">
+            <strong><label for="" class="form-label">Digite o nome do produto:</label></strong>
+            <input type="text"
+                class="form-control form-control-sm" name="nome" id="nome"  placeholder="Digite nome do produto:">
+        </div>
+
+        <div class="mb-3">
+            <strong><label for="" class="form-label">Quantidade de produtos:</label></strong>
+            <input type="number"
+                class="form-control form-control-sm" name="quantidade" id="quantidade"  placeholder="Digite a quantidade de produtos:">
+        </div>
+
+        <div class="mb-3">
+            <strong><label for="" class="form-label">Valor dos produtos:</label></strong>
+            <input type="number"
+                class="form-control form-control-sm" name="valor" id="valor"  placeholder="Digite o valor dos produtos:">
+        </div>
+
+        <div class="mb-3">
+            <button type="button" class="btn btn-dark" id="btnCalcular">Calcular</button>
+            <a href="ex_11.html"><button type="reset" class="btn btn-dark">Limpar</button></a>
+        </div>
+        
+        <div class="card mb-3">
+            <div class="card-body bg-dark">
+              <!--<h5 class="card-title">O total a se pagar é</h5>-->
+              <p class="card-text" id="totalPagar">---</p>
+            </div>
+        </div>
+
+    </div>    
+</body>
+</html>

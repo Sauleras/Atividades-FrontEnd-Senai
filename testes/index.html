@@ -10,29 +10,29 @@
 </head>
 <body>
 
-    <form name="cadastro">
+     <div id="timer"></div>
 
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome">
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <br>
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha">
-        <br>
-        <label for="senha2">Repetir Senha:</label>
-        <input type="password" id="senha2" name="senha2">
-        <br>
-        <input type="button" value="Cadastrar" id="btnCadastrar">
-
-    </form>
-    <hr>
-
-    <h1>Cadastro</h1>
-    <div id="mostrarCadastro">
-        <script src="eventos.js"></script>
     </div>
+    <script>
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
+            if (--timer < 0) {
+                timer = duration;
+            }
+            }, 1000);
+        }
+        window.onload = function () {
+            var duration = 60 * 6; // Converter para segundos
+            display = document.querySelector('#timer'); // selecionando o timer
+            startTimer(duration, display); // iniciando o timer
+        };
+    </script>
     
 </body>
 </html>

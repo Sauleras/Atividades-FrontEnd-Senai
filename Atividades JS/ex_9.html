@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan house JS</title>
+</head>
+<body>
+    <h1>LAN HOUSE JS</h1>
+
+    <p> Valor por quinze minutos de uso:
+        <input type="text" id="valorConstante">
+
+
+    </p> 
+    <p> tempo passado (min):
+        <input type="text" id="tempoPassadoClient">
+
+
+    </p>
+    <p>
+
+        <input type="button" onclick="informaValor()" value="calcula valor" >
+    </p> 
+    <h3 id="mostrarValor"></h3>
+    
+<script>
+function informaValor() { 
+
+var valorEntrado=document.getElementById("valorConstante").value;
+var tempoPass=document.getElementById("tempoPassadoClient").value;
+
+var tempo = tempoPass / 15;
+
+if(!Number.isInteger(tempo)) { tempo = Math.trunc(tempo) + 1; }
+
+var valor_para_cobrar = valorEntrado * tempo;
+
+alert(valor_para_cobrar);
+
+}
+</script>
+</body>
+</html>

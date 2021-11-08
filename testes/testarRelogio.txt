@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="ex9.js" defer></script>
+</head>
+
+<body style="background-color: rgba(121, 133, 133, 0.527);">
+    <br><br>
+
+    <div class="container border bg-secondary text-light p-3" style="width: 18rem">
+
+        <h1 class="mb-3">Lan House - TecGames</h1>
+        <div class="mb-3">
+            <p>Olá usuario! Clique no botão <strong>Iniciar</strong> para usar a maquina.</p>
+        </div>
+
+        <div class="mb-3">
+            <button onclick="start();" class="bg-green">Iniciar</button>
+            <button onclick="pause();" class="bg-red">Pausar</button>
+            <button onclick="stop();" class="bg-red">Parar</button>
+        </div>
+
+        <div class="mb-3 border" style="text-align: center; background-color: black;">
+            <h4 id="counter">00:00:00</h4>
+            <h4 id="totalPagar">Total a Pagar:</h4>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+//script
+var hh = 0;
+var mm = 0;
+var ss = 0;
+var pag = 0;
+var resultado = 0;
+
+var tempo = 1000;//Quantos milésimos valem 1 segundo?
+var tempoP = 1000;
+var cron;
+var cronP
+
+//Inicia o temporizador
+function start() {
+    cron = setInterval(() => { timer(); }, tempo);
+    cronP = setInterval(() => { calculo(); }, tempoP);
+}
+
+// Para o temporizador mas não limpa as variáveis
+function pause() {
+    clearInterval(cron);
+}
+
+//Para o temporizador e limpa as variáveis
+function stop() {
+    clearInterval(cron);
+    hh = 0;
+    mm = 0;
+    ss = 0;
+
+    document.getElementById('counter').innerText = '00:00:00';
+    document.getElementById('totalPagar').innerText = 'Total a Pagar:';
+}
+
+//Faz a contagem do tempo e exibição
+function timer() {
+    ss++; //Incrementa +1 na variável ss
+
+    if (ss == 59) { //Verifica se deu 59 segundos
+        ss = 0; //Volta os segundos para 0
+        mm++; //Adiciona +1 na variável mm
+
+        if (mm == 59) { //Verifica se deu 59 minutos
+            mm = 0;//Volta os minutos para 0
+            hh++;//Adiciona +1 na variável hora
+        }
+    }
+
+    //Cria uma variável com o valor tratado HH:MM:SS
+    var format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+
+    //Insere o valor tratado no elemento counter
+    document.getElementById('counter').innerText = format;
+
+    //Retorna o valor tratado
+    
+    return format;
+}
+
+function calculo(mm) {
+    //pag++; //Incrementa +1 na variável ss
+
+    if (mm >= 1) { //Verifica se deu 59 segundos
+        var soma = `Total a pagar: ${paserFloat(resultado + 2)}`
+    }
+
+    //Insere o valor tratado no elemento counter
+    document.getElementById('totalPagar').innerText = soma;
+
+    //Retorna o valor tratado
+    return soma;
+}
